@@ -40,6 +40,20 @@ public class hello{
         
         //JAVA es sensible a las mayusculas y minusculas (como casi todo idioma)
 
+
+        //tipo var
+        var nombre ="gg";
+        //var es exclusivo para definir variables dentro de metodos no puede ser usado 
+        //para definir variables de clases o parametros y solo podemos definir variables locales
+        //el tipo de dato de be ser inferible var nombre = 222 (lo tomara como int)
+        
+
+
+        //constantes
+
+        final int pista = 15; //siempre se inicializan las constantes
+        //pista = 2 esto no se puede
+
         
         
 
