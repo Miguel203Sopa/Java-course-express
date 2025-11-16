@@ -14,7 +14,14 @@ public class cadenas{
         System.out.println(cadena4);
 
         //indice de cadenas:
-
+        String cadenaA = "Obstaculo";
+        char caracter1; 
+        
+        caracter1 = cadenaA.charAt(0);
+        System.out.println("primer caracter: "+caracter1);
+        caracter1 = cadenaA.charAt(8);
+        System.out.println("ultimor caracter: "+caracter1);
+    
     }
 
 
