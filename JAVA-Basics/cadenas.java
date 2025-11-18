@@ -21,6 +21,19 @@ public class cadenas{
         System.out.println("primer caracter: "+caracter1);
         caracter1 = cadenaA.charAt(8);
         System.out.println("ultimor caracter: "+caracter1);
+        
+        //inmutabilidad de cadenas
+        //las cadenas en JAVA no se pueden modificar 
+        
+        String cadenaB, cadenaC, cadenaD;
+        cadenaC ="Hola";
+        cadenaD ="Estas";
+        
+        
+        cadenaB= cadenaC+" Como "+cadenaD;
+        System.out.println(cadenaB);
+        
+        
     
     }
 
