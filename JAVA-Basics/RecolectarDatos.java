@@ -20,7 +20,17 @@ public class RecolectarDatos {
 		
 		
 		//Integer.parseInt(); convierte texto a entero
+		System.out.println("Escribe un numero entero: ");
 		int enteroST =Integer.parseInt(consola.nextLine());
+		System.out.println("Escribe un numero decimal: ");
+		double dobleST= Double.parseDouble(consola.nextLine());
+		System.out.println("Escribe otro numero decimal: ");
+		float floteST= Float.parseFloat(consola.nextLine());
+		System.out.println("Escribe un booleano: ");
+		boolean BoolST= Boolean.parseBoolean(consola.nextLine());
+		
+		
+		
 		
 		
 		
