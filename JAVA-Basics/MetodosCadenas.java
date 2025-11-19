@@ -37,6 +37,13 @@ public class MetodosCadenas {
 		System.out.println("la nueva cadena es "+cadena5);
 		
 		
+		//formateo de cadenas 
+		
+		String nombreF = "Mateooooooo";
+		var edadF = 34;
+		var salario = 2199.22;
+		// El argumento de la derecha se sustituira donde esta %s
+		var mensaje = String.format("Nombre: %s, edad: %s", nombreF, edadF); 
 		
 		
 		

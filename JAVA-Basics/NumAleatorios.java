@@ -6,7 +6,7 @@ public class NumAleatorios {
 		
 	Random Alea = new Random();
 	
-	var numero = Alea.nextInt(10); //numero aleatorio entre 0y9
+	var numero = Alea.nextInt(10); //numero aleatorio entre 0y9 seeeee
 	System.out.println("el numero es "+numero);
 	
 	var num = numero+Alea.nextInt(10);
