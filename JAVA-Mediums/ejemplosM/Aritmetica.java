@@ -17,15 +17,15 @@ public class Aritmetica {
 	
 	
 	
-	int valorA;
-	int valorB;
+	public int valorA;
+	public int valorB;
 	
-	void suma() {
+	public void suma() {
 		var result= this.valorA+this.valorB;
 		System.out.println("la suma es "+result);
 	}
 	
-	void resta() {
+	public void resta() {
 		var result= this.valorA - this.valorB;
 		System.out.println("la resta es "+result);
 	}

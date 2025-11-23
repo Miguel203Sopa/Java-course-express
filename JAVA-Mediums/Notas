@@ -1,0 +1,44 @@
+//el encapsulamiento nos permite controlar el acceso
+	// alos atributos de nuestra clase
+	
+	
+	//private para evitar acceder directamente
+	
+	//para poder leer o modificar usaremos get y set
+	
+	//get obtener valor de un atributo
+	
+	//set modificar un valor de un atributo
+	
+	los atributos privados se representan con guiones (-)
+	los atributos publicos se representan con cruces (+)
+	
+	
+	Herencia 
+	
+	Clases padres[metodos](superclase) -> Clases Hijas[metodos_heredados+metodos_propios](subclase)
+	
+	ejemplo
+	Clase Animal:
+		Metodos:
+			Comer()
+			Dormir()
+			
+			
+	Clase Perro:
+		Metodos:
+			Comer()
+			Dormir()
+			Raza()
+			
+	El modificador protected 
+	ejemplo:
+	Protected class noseWe(){}
+	hace que la clase sea inaccesible directamente
+	pero si puede acceder a ella por medio de herencia
+	esto por medio de sus clases hijas
+	
+	si no se le pone modificador el atributo de la clase
+	o la clase solo se puede acceder en el mismo archivo
+	
+	un metodo privado no se puede heredar <-----------------------
