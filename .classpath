@@ -3,5 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry excluding="retos/" kind="src" path="JAVA-Basics"/>
 	<classpathentry kind="src" path="JAVA-Basics/retos"/>
+	<classpathentry kind="src" path="JAVA-Mediums"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

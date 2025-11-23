@@ -34,7 +34,7 @@ public class funcionesLetsGo {
 		
 		funIntro("hello that");
 		suma(2,3);
-		funRecursiva(5);
+		funRecursiva(5); //
 	}
 
 	
