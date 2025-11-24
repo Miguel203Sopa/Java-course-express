@@ -42,3 +42,94 @@
 	o la clase solo se puede acceder en el mismo archivo
 	
 	un metodo privado no se puede heredar <-----------------------
+	
+	@Override funciona para aclarar la sobreescritura
+	de una clase, es una nota
+	
+	para sobreescribir una funcion de la clase padre
+	en la clase hija solo se escribe exactamente
+	la misma funcion en la clase hija y se hacen
+	los cambios correspondientes 
+	
+	usando la palabra clave Super podemos usar los metodos
+	de la clase padre que fueron sobreescritos, es como usar
+	la version anterior a su sobreescritura
+	
+	polimorfismo significan diferentes formas
+	En herencia si tenemos una funcion padre y varias funciones hijas
+	que se van heredando dentro de si, por ejemplo
+	Abuelo -> Padre -> Hijo 
+	
+	en este caso los 3 pueden tener el metodo de Bigote();
+	
+	Abuelo hereda el metodo Bigote a las clases con menor
+	herarquia pero estas mismas la reescriben a su manera
+	si mandamos a llamar por ejemplo
+	Hijo.bigote(); en este caso la clase que se llamaria
+	seria la de menor jerarquia hasta ese punto
+	osea SU METODO BIGOTE esto a menos que no haya sobreescritura de ningun
+	tipo
+	
+	el polimorfismo depende de la herencia y la sobreescritura
+	ya que puedes tener distintas formas de ejecucion de una misma funcion
+	por ejemplo Abuelo heredo a Padre, padre lo sobreescribio y lo que hereda
+	la clase hijo tambien se sobreescribe 
+	por lo tanto tienes un mismo metodo definido en 3 clases diferentes
+	con 3 formas diferentes del metodo, pero que a su vez las 2 posteriores parten 
+	de una sola.
+	
+	por lo tanto se veria algo asi 
+	
+	Abuelo.Bigote();  
+	Padre.Bigote()*;
+	Hijo.Bigote()**;
+	
+	esto puede variar mucho por ejemplo
+	no habria polimorfismo si desde la clase abuelo
+	se heredara la misma funcion sin cambios
+	solo seria una funcion accesible para distintos tipos 
+	de objetos
+	
+	EN HERENCIAS NO PODEMOS DEJAR DEFAULT O PRIVATE
+	
+	Jerarquia de modificadores 
+	en terminos de prohibiciones:
+	Private -1
+	Default -2
+	Protected -3
+	Public -4
+	
+	un metodo polimorfico es aquel metodo
+	que como parametro recibe datos de la 
+	clase padre y por lo tanto de las clases hijas
+	
+	la clase object es la clase padre de todas las clases
+	de java
+
+	la clase object contiene 
+	-equals()
+	-toString()
+	-hashCode()
+	
+	estos metodos se pueden sobreescribir
+	
+	con CTRL + 7 puedes comentar
+	partes del codigo, si no lo sabia 
+	
+	
+	
+	Contexto estatico 
+	creacion de clases -> contexto Estatico
+	creacion de objetos -> contexto Dinamico
+	
+	el contexto estatico no puede acceder al contexto
+	dinamico ya que apenas estamos definiendo la clase
+	por lo tanto no hay objetos
+	
+	desde el contexto dinamico si se puede acceder al
+	contexto estatico 
+	
+	los atributos estaticos son los que estan relacionados 
+	con aspectos de la clase, como valores meta, mientras que los 
+	dinamicos seran atributos relacionados a los objetos
+	

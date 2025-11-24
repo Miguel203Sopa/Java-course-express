@@ -12,6 +12,10 @@ public class Animal {
 	protected void dormir() {
 		System.out.println("Petatiarse");
 	}
+	
+	protected void Ruido() {
+		System.out.println("AHHHHH");
+	}
 
 }
 //sobreescritura de metodos
@@ -22,20 +26,45 @@ class Perro extends Animal{
 		
 	}
 	@Override 
-	protected void dormir() {System.out.println("duermo 15 hrs al dia");} 
+	protected void dormir() {
+		System.out.println("duermo 15 hrs al dia");
+		super.dormir();
 	//ahora perro llamara este metodo
 	// en vez del heredado
+		}
 	
-	
+	protected void Ruido() {
+		System.out.println("WOOOOOOOOOFFFFFFFF");
+	}
+
 }
 
+class Gato extends Animal{
+	
+	protected void Ruido() {
+		System.out.println("MIAUUUUUUUU");
+	}
+
+}
+
+
+
 class PruebaAnimal{
+	
+	//metodo polimorfico
+	static void imprimirSonido(Animal animal) {
+		animal.Ruido();
+	}
+	
+	
+	
+	
 	public static void main(String[] args) {
 		System.out.println("Ejemplo de Herencia");
 		System.out.println("clase padre, Animal");
 		var animal1 = new Animal(); //clase padre
 		var perro1 = new Perro();
-		
+		var gato1 = new Gato();
 		//clase padre
 		animal1.comer();
 		animal1.dormir();
@@ -46,5 +75,12 @@ class PruebaAnimal{
 		perro1.hacerSonido();
 		
 		
+		System.out.println("Ejemplo de polimorfismo");
+		imprimirSonido(animal1);
+		imprimirSonido(perro1);
+		imprimirSonido(gato1);
+		
 	}
+	
+	
 }
