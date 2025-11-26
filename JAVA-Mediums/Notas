@@ -133,3 +133,55 @@
 	con aspectos de la clase, como valores meta, mientras que los 
 	dinamicos seran atributos relacionados a los objetos
 	
+	
+	Las clases abstractas son aquellas que dejan sin implementar alguno de sus
+	metodos, para que las clases hijas o derivadas proporcione la implementacion.
+	
+	eso si las clases hijas para poder ser clases hijas deben ser clases abstractas
+	o usar obligatoriamente los metodos abstractos
+	
+	tampoco puedes instanciarla osea no puedes crear objetos de clases abstractas
+	
+	Interfaces:
+	Una interface es un tipo similar a una clase abstracta. Sin embargo la interface
+	se enfoca mas en el comportamiento, y la clase abstracta se enfoca en abstraer 
+	caracteristicas en comun
+	
+	es una relacion entre una clase la cual nos da unas funciones
+	las cuales las funciones relacionadas a ella deben implementar
+	para cumplir con esa relacion entre clases
+	
+	los metodos definidos en la interface son abstractos
+	y publicos
+	
+	en este caso como no son clases padres o hijas sino de relacion por 
+	mplementacion se escribe ASI
+	
+	class [nombre de la clase]  implements [Interface]{}
+	
+	
+	Colecciones:
+	una coleccion representa un grupo de objetos
+	algunas colecciones permiten elementos
+	duplicados y otras no, algunas tienen sus
+	elementos ordenados y otras no
+	
+	Collection: List y Set
+	List -> Arrayset
+	set -> SortedSet
+	
+	Map -> HashMap
+	
+	
+	JAVABEANS:
+	Un JavaBean es una clase de java que debe cubrir
+	ciertas caracteristicas:
+	
+	-Debe tener un constructor vacio aunque puede
+	tener mas constructores
+	
+	-Debe aplicar el concepto de encapsulamiento.
+	
+	-Debe implemenetar la interface Seralizable.
+	permite enviar datos a la red o a discos duros
+	
