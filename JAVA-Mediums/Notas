@@ -185,3 +185,15 @@
 	-Debe implemenetar la interface Seralizable.
 	permite enviar datos a la red o a discos duros
 	
+	
+	sintaxis de lista:
+	List<String> Semana = new ArrayList<String>();
+	esto es con tipo de dato especificado 
+	
+	List miLista = new ArrayList();
+	esto es con datos en general de tipo Object (Genericos)
+	
+	para definir que queremos datos en general de cualquier tipo
+	ponemos Object 
+	
+	Los sets no permiten elementos duplicados
