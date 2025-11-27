@@ -14,12 +14,13 @@ Nacionalidad varchar(35)
 
 --Tabla Libro
 CREATE TABLE Libro 
-(CodigoLigro char(10) NOT NULL,
+(CodigoLibro char(10) NOT NULL,
 Titulo varchar(max),
 ISBN varchar(20) NOT NULL,
 AñoEdicion char(4),
 CodigoEditorial char(5)
 );
+/*DROP TABLE Libro*/
 
 --Tabla Editorial
 CREATE TABLE Editorial(
@@ -48,3 +49,43 @@ CHECK (AñoEdicion > 2010);
 ALTER TABLE Libro 
 ADD CONSTRAINT U_isbn
 UNIQUE(ISBN)
+
+--Llaves Primarias 
+
+ALTER TABLE Autor 
+ADD CONSTRAINT PK_CodigoAutor
+PRIMARY KEY(CodigoAutor)
+GO
+
+ALTER TABLE Libro
+ADD CONSTRAINT PK_CodigoLibro
+PRIMARY KEY (CodigoLibro)
+GO
+
+ALTER TABLE EDITORIAL 
+ADD CONSTRAINT PK_CodigoEditorial
+PRIMARY KEY (CodigoEditorial)
+
+GO
+
+--llaves Foraneas 
+
+ALTER TABLE Detalle_AutorLibro
+ADD CONSTRAINT FK_CodigoAutor
+FOREIGN KEY(CodigoAutor)
+REFERENCES Autor(CodigoAutor)
+GO
+
+ALTER TABLE Detalle_AutorLibro
+ADD CONSTRAINT FK_CodigoLibro
+FOREIGN KEY(CodigoLibro)
+REFERENCES LIBRO(CodigoLibro)
+GO
+
+ALTER TABLE Libro
+ADD CONSTRAINT FK_LibroEditorial
+FOREIGN KEY (CodigoEditorial)
+REFERENCES Editorial(CodigoEditorial)
+GO
+
+
