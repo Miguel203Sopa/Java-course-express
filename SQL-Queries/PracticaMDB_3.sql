@@ -103,8 +103,6 @@ SELECT CategoryName AS CateName FROM Categories
 --por medio de AS  puedes renombrar columnas
 -- NombreOriginal AS NombreNuevo
 
-SELECT OrderId, OrderDate, ShippedDate, ShippedDate +5 AS RetrasoEnvio
-FROM Orders  
 --esto muestra los valores de 3 columnas con la condicion de que haya 
 --un retraso de 5 dias y que se muestren en una columna llamada RetrsaoEnvio
 
