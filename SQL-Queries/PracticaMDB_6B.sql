@@ -17,7 +17,7 @@ GO
 --ORDER BY 
 --INTO 
 
-CREATE VIEW dbo.ShippedDate
+CREATE VIEW dbo.ShipStatusView
 AS
 SELECT OrderID,ShippedDate,ContactName 
 FROM Customers c INNER JOIN Orders O  -- remember left is first and right is last 
