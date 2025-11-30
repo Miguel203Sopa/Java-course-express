@@ -35,3 +35,65 @@ Tipos de triggers:
 	corresponden principalmente a instrucciones CREATE, ALTER y
 	DROP de Transact-SQL, y a determinados procedimientos
 	almacenados del sistema que ejecutan operaciones de tipo DDL
+
+Sintaxis:
+	CREATE TRIGGER nombre_trigger
+	ON { nombre_tabla_o_vista }
+	{
+	{ FOR | AFTER | INSTEAD OF }
+	{
+	instruccion_modificacion1,
+	instruccion_modificacion2,
+	instruccion_modificacion3
+	}
+	AS
+	Instrucción_sql0 ,
+	Instruccion_sq1 ,
+	Instruccion_sql2 ,
+	…
+	Instrucción_sqlN
+	} 
+
+Tablas DELETED y INSERTED
+	• Las instrucciones de triggers DML utilizan dos
+	tablas especiales denominadas inserted
+	y deleted. SQL Server crea y administra
+	automáticamente ambas tablas. La estructura de
+	las tablas inserted y deleted es la misma que
+	tiene la tabla que ha desencadenado la
+	ejecución del trigger.
+
+	• La primera tabla (inserted) solo está disponible en
+	las operaciones INSERT y UPDATE y en ella
+	están los valores resultantes despues de la
+	inserción o actualización. Es decir, los datos
+	insertados. Inserted estará vacía en una
+	operación DELETE
+
+	En la segunda (deleted), disponible en las
+	operaciones UPDATE y DELETE, están los
+	valores anteriores a la ejecución de la
+	actualización o borrado. Es decir, los datos que
+	serán borrados. Deleted estará vacia en una
+	operacion INSERT.
+
+	• ¿Existe una tabla UPDATED? No, hacer una
+	actualización es lo mismo que borrar (deleted) e
+	insertar los nuevos datos (inserted).
+
+	• La sentencia UPDATE es la única en la que
+	inserted y deleted tienen datos simultaneamente.
+
+	• No se pueden modificar directamente los datos
+	de estas tablas.
+
+	sintaxis de trigger DDL:
+	CREATE TRIGGER <trigger_name, sysname,
+	table_alter_drop_safety> ON DATABASE FOR
+	<data_definition_statements, , DROP_TABLE,
+	ALTER_TABLE> AS BEGIN ...END
+
+/*
+	Podemos activar y desactivar Triggers a través de las
+siguientes instrucciones.
+*/
