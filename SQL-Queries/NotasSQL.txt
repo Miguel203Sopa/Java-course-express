@@ -1,0 +1,37 @@
+
+Procedimientos Almacenados: Cursores
+
+------------------------------------------------------------------------
+Nota:
+Cuando trabajemos con cursores debemos seguir los siguientes pasos:
+• Declarar el cursor, utilizando DECLARE
+• Abrir el cursor, utilizando OPEN
+• Leer los datos del cursor, utilizando FETCH ... INTO
+• Cerrar el cursor, utilizando CLOSE
+• Liberar el cursor, utilizando DEALLOCATE
+Cuando trabajamos con cursores, la función @@FETCH_STATUS nos indica el estado de la última instrucción
+FETCH emitida, los valores posibles son:
+
+0 La instrucción FETCH se ejecutó correctamente.
+-1 La instrucción FETCH no se ejecutó correctamente o la fila estaba más
+allá del conjunto de resultados.
+-2 Falta la fila recuperada.
+
+-------------------------------------------------------------------------
+
+Triggers en Transact SQL 
+
+-------------------------------------------------------------------------
+Un trigger es una clase especial de procedimiento almacenado, se ejecuta
+automaticamente cuando se produce un evento en el servidor de bases de datos.
+
+Tipos de triggers:
+	+Trigger DML: se ejecutan cuando un usuario intenta modificar datos mediante
+	un evento  de lenguaje de manipulacion de datos (DML), los eventos 
+	DML son instrucciones INSERT, UPDATE o DELETE de una tabla o vista.
+
+	• Trigger DDL, se ejecutan en respuesta a una variedad de eventos
+	de lenguaje de definición de datos (DDL). Estos eventos
+	corresponden principalmente a instrucciones CREATE, ALTER y
+	DROP de Transact-SQL, y a determinados procedimientos
+	almacenados del sistema que ejecutan operaciones de tipo DDL
