@@ -1,8 +1,11 @@
-package ProyectoSnacks;
+package servicio;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Snacks {
+import dominio.Snack;
+
+public class ServicioSnacksLista implements IServicioSnacks {
 
 	private static final List<Snack> snacks;
 	
@@ -17,11 +20,11 @@ public class Snacks {
 		snacks.add(new Snack("Pancho",120));
 	}
 	
-	public static void agregarSnack(Snack snack) {
+	public void agregarSnack(Snack snack) {
 		snacks.add(snack);
 	}
 	
-	public static void mostrarSnacks() {
+	public  void mostrarSnacks() {
 		var inventarioSnacks="";
 		for (var snack:snacks) {
 			inventarioSnacks += snack.toString() + "\n";
@@ -31,7 +34,7 @@ public class Snacks {
 	}
 	
 	
-	public static List<Snack> getSnacks(){
+	public  List<Snack> getSnacks(){
 		return snacks;
 	}
 	public static void main(String[] args) {

@@ -1,5 +1,11 @@
-package ProyectoSnacks;
+package presentacion;
+
 import java.util.Scanner;
+
+import dominio.Snack;
+import servicio.ServicioSnacksLista;
+import servicio.IServicioSnacks;
+
 import java.util.List;
 import java.util.ArrayList;
 public class MaquinaSnacks {
@@ -12,9 +18,13 @@ public class MaquinaSnacks {
 	public static void maquinaSnacks() {
 		var salir = false;
 		Scanner console = new Scanner(System.in);
+		//creamos objeto para el servicio de snacks
+		IServicioSnacks servicioSnacks =  new ServicioSnacksLista();
+		
+		
 		List<Snack> productos = new ArrayList();
 		System.out.println("*** Maquina de ServicioSnacksLista ***");
-		Snacks.mostrarSnacks(); //mostrar inventario de snacks 
+		servicioSnacks.mostrarSnacks(); //mostrar inventario de snacks 
 		while(!salir) {
 			try {
 				var opcion = mostrarMenu(console);
@@ -46,9 +56,9 @@ public class MaquinaSnacks {
 		var salir = false;
 		switch(opcion) 
 		{
-		case 1 -> comprarSnack(consola, productos);
+		case 1 -> comprarSnack(consola, productos,servicioSnacks);
 		case 2 -> mostrarTicket(productos);
-		case 3 -> agregarSnack(consola);
+		case 3 -> agregarSnack(consola,servicioSnacks);
 		case 4 -> salir = true;
 		}
 		return salir;
@@ -58,9 +68,9 @@ public class MaquinaSnacks {
 		System.out.println("Que snack quieres ?");
 		var idSnack = Integer.parseInt(consola.nextLine());
 		var snackEncontrado = false;
-		for(var snack: Snacks.getSnacks()) 
+		for(var snack: ServicioSnacksLista.getSnacks()) 
 		{
-			if(idSnack == snack.getIdSnack()) {
+			if(idSnack == servicioSnacks.getIdSnack()) {
 				
 				productos.add(snack);
 				System.out.println("Ok, Snack agregado "+snack);
@@ -91,9 +101,9 @@ public class MaquinaSnacks {
 		var nombre = consola.nextLine();
 		System.out.println("Precio del snack");
 		var precio=Double.parseDouble(consola.nextLine());
-		Snacks.agregarSnack(new Snack(nombre,precio));
+		ServicioSnacksLista.agregarSnack(new Snack(nombre,precio));
 		System.out.println("Tu Snack se ha agregado correctamente");
-		Snacks.mostrarSnacks();
+		ServicioSnacksLista.mostrarSnacks();
 		
 		
 	}

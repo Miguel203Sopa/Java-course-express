@@ -4,5 +4,6 @@
 	<classpathentry excluding="retos/" kind="src" path="JAVA-Basics"/>
 	<classpathentry kind="src" path="JAVA-Basics/retos"/>
 	<classpathentry kind="src" path="JAVA-Mediums"/>
+	<classpathentry kind="src" path="Proyecto_Archivo_Snacks"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
