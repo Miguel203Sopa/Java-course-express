@@ -1,8 +1,9 @@
+package Modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Consultas1 {
+public class Conexion {
 
     private static final String URL =
         "jdbc:sqlserver://localhost:1433;databaseName=zona_fit_db;encrypt=false;instanceName=USER;";
