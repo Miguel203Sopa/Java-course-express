@@ -1,0 +1,5 @@
+SELECT TOP (100) [id]
+      ,[nombre]
+      ,[apellido]
+      ,[membresia]
+  FROM [zona_fit_db].[dbo].[Cliente]
