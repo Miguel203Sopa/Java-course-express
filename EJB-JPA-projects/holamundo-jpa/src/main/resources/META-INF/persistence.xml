@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2">
+
+    <persistence-unit name="personaPU" transaction-type="RESOURCE_LOCAL">
+        <class>org.example.Persona</class>
+        <properties>
+            <!-- DRIVER JDBC -->
+            <property name="javax.persistence.jdbc.driver"
+                      value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+
+            <!-- URL DE CONEXIÓN -->
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:sqlserver://localhost:1433;databaseName=JAVA_DB_EXAMPLE;encrypt=true;trustServerCertificate=true"/>
+
+            <!-- USUARIO -->
+            <property name="javax.persistence.jdbc.user" value="JAVA_USER"/>
+
+            <!-- PASSWORD -->
+            <property name="javax.persistence.jdbc.password" value="12345"/>
+
+            <!-- DIALECTO (si usas Hibernate) -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.SQLServerDialect"/>
+
+
+
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
