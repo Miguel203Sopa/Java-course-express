@@ -1,5 +1,1 @@
-Hola esta nota es para recordar que los comandos
-de linux pueden ser aplicados a la terminal de git
-debido a que ambos usan bash, en todo caso tengas problemas
-de edicion usa nano para hacer apuntes o recortes rapido 
-en todo caso gracias ---<><>---
+las carpetas de proyecto deben ejecutarse aparte para realizar pruebas
