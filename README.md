@@ -1,2 +1,2 @@
 # Java-course-express
-curso de Java/sql/rest
+curso de Java/SQL Server/Spring
