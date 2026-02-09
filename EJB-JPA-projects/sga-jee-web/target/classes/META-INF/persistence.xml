@@ -1,0 +1,37 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="
+               https://jakarta.ee/xml/ns/persistence
+               https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+              version="3.0">
+
+
+<persistence-unit name="PersonaPU" transaction-type="JTA">
+        <jta-data-source>jdbc/PersonaDb</jta-data-source>
+        <properties>
+<!--            &lt;!&ndash; DRIVER JDBC &ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.driver"-->
+<!--                      value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>-->
+
+<!--            &lt;!&ndash; URL DE CONEXIÓN &ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.url"-->
+<!--                      value="jdbc:sqlserver://localhost:1433;databaseName=JAVA_DB_EXAMPLE;encrypt=true;trustServerCertificate=true"/>-->
+
+<!--            &lt;!&ndash; USUARIO &ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.user" value="JAVA_USER"/>-->
+
+<!--            &lt;!&ndash; PASSWORD &ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.password" value="12345"/>-->
+
+<!--            &lt;!&ndash; DIALECTO (si usas Hibernate) &ndash;&gt;-->
+<!--            <property name="hibernate.dialect"-->
+<!--                      value="org.hibernate.dialect.SQLServerDialect"/>-->
+
+
+
+<!--            <property name="eclipselink.logging.level.sql" value="FINE"/>-->
+
+<!--            <property name="eclipselink.logging.parameters" value="true"/>-->
+        </properties>
+    </persistence-unit>
+</persistence>
