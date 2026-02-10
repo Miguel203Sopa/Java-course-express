@@ -17,7 +17,7 @@ public class PersistirObjetoJPA {
             //Inicia la transaccion
 
 
-            //MEMORIZA ESTO 
+            //MEMORIZA ESTO
 
             //Paso 1. Crea nuevo objeto
             //Objeto en estado transitivo
