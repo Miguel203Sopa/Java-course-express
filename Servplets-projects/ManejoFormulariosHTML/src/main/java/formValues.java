@@ -49,7 +49,7 @@ public class formValues extends HttpServlet {
 
 
             out.println("<tr><th>Genero</th><td>"+genero+"</td></tr>");
-            out.println("<tr><th>Ocupacion</th><td>"+ocupacion+"</td></tr>");
+            out.println("<tr><th>Ocupacion</th><td>"+ocupacion+"</td></tr>");|
             out.println("<tr><th>Comentarios</th><td>"+comentarios+"</td></tr>");
             out.println("<tr><th>valor oculto</th><td>"+valorOculto+"</td></tr>");
             out.println("");
