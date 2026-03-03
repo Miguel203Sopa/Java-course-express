@@ -15,10 +15,7 @@ public class PersistirObjetoJPA {
         try (EntityManager em = emf.createEntityManager()) {
             EntityTransaction tx = em.getTransaction();
             //Inicia la transaccion
-
-
-            //MEMORIZA ESTO
-
+            
             //Paso 1. Crea nuevo objeto
             //Objeto en estado transitivo
             Persona persona1 = new Persona("Pedro", "Luna", "pluna@mail.com", "13135566");
@@ -27,7 +24,7 @@ public class PersistirObjetoJPA {
             //Paso 3. Ejecuta SQL
             em.persist( persona1 );
             log.info("Objeto persistido - aun sin commit:" + persona1);
-             //Paso 4. commit/rollback
+            //Paso 4. commit/rollback
             tx.commit();
             //Objeto en estado detached
             log.info("Objeto persistido - estado detached:" + persona1);

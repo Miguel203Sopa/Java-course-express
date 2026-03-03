@@ -1,5 +1,8 @@
 
+USE JAVA_DB_EXAMPLE;
+GO
 SELECT * FROM persona
+GO
 
 CREATE TABLE usuario(
 	id_usuario INT PRIMARY KEY,
