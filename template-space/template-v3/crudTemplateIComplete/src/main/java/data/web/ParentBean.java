@@ -1,0 +1,34 @@
+package data.web;
+
+import data.domain.Parent;
+import data.service.ParentService;
+import jakarta.ejb.EJB;
+import jakarta.faces.view.ViewScoped;
+import jakarta.inject.Named;
+import java.io.Serializable;
+import java.util.List;
+
+@Named
+@ViewScoped
+public class ParentBean implements Serializable {
+
+    @EJB
+    private ParentService service;
+
+    private Parent parent = new Parent();
+
+    public void save() {
+        service.create(parent);
+        parent = new Parent();
+    }
+
+    public List<Parent> getParents() {
+        return service.findAll();
+    }
+
+    public Parent getParent() { return parent; }
+
+    public String viewDetails(Long id) {
+        return "detail.xhtml?faces-redirect=true&parentId=" + id;
+    }
+}

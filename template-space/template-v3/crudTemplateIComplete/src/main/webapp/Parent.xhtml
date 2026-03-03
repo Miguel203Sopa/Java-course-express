@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head> <title>Parent CRUD</title>
+</h:head>
+
+
+<h:body>
+
+    ```
+    <h2>Crear Parent</h2>
+
+    <h:form>
+
+        Código:
+        <h:inputText value="#{parentBean.parent.code}" required="true"/>
+        <br/><br/>
+
+        Nombre:
+        <h:inputText value="#{parentBean.parent.name}" required="true"/>
+        <br/><br/>
+
+        Status:
+        <h:inputText value="#{parentBean.parent.status}" />
+        <br/><br/>
+
+        Enabled:
+        <h:inputText value="#{parentBean.parent.enabled}" />
+        <br/><br/>
+
+
+
+
+        <h:commandButton value="Guardar"
+                         action="#{parentBean.save}" />
+
+    </h:form>
+
+    <hr/>
+
+    <h2>Lista Parents</h2>
+
+
+    <h:dataTable value="#{parentBean.parents}" var="p">
+        <h:column>#{p.id}</h:column>
+        <h:column>#{p.code}</h:column>
+        <h:column>#{p.name}</h:column>
+        <h:column>#{p.status}</h:column>
+        <h:column>#{p.enabled}</h:column>
+
+
+    </h:dataTable>
+
+</h:body>
+
+</html>
+
