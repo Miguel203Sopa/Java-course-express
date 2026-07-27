@@ -1,0 +1,5 @@
+data\web\ParentDetailBean.class
+data\domain\Parent.class
+data\domain\ParentDetail.class
+data\service\ParentService.class
+data\web\ParentBean.class
